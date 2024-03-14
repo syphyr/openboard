@@ -17,6 +17,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.ContextThemeWrapper;
 import android.view.inputmethod.EditorInfo;
+import android.view.ViewConfiguration;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -310,6 +311,11 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
     public void toggleAlwaysIncognitoMode() {
         final boolean oldValue = mPrefs.getBoolean(Settings.PREF_ALWAYS_INCOGNITO_MODE, Defaults.PREF_ALWAYS_INCOGNITO_MODE);
         mPrefs.edit().putBoolean(Settings.PREF_ALWAYS_INCOGNITO_MODE, !oldValue).apply();
+    }
+
+    public static int readDefaultKeyLongpressTimeout() {
+        final int default_longpress_key_timeout = ViewConfiguration.getLongPressTimeout();
+        return default_longpress_key_timeout;
     }
 
     public static int readHorizontalSpaceSwipe(final SharedPreferences prefs) {
