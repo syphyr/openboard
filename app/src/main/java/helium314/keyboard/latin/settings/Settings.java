@@ -18,6 +18,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.ContextThemeWrapper;
 import android.view.inputmethod.EditorInfo;
+import android.view.ViewConfiguration;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -330,6 +331,11 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
 
     public static ToolbarMode readToolbarMode(final SharedPreferences prefs) {
         return ToolbarMode.valueOf(prefs.getString(PREF_TOOLBAR_MODE, Defaults.PREF_TOOLBAR_MODE));
+    }
+
+    public static int readDefaultKeyLongpressTimeout() {
+        final int default_longpress_key_timeout = ViewConfiguration.getLongPressTimeout();
+        return default_longpress_key_timeout;
     }
 
     public static int readHorizontalSpaceSwipe(final SharedPreferences prefs) {
