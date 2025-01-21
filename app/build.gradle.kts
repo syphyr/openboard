@@ -62,7 +62,7 @@ android {
 
     ndkVersion = "27.2.12479018"
 
-    packagingOptions {
+    packaging {
         jniLibs {
             // shrinks APK by 3 MB, zipped size unchanged
             useLegacyPackaging = true
