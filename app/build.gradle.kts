@@ -81,7 +81,7 @@ android {
             path = File("src/main/jni/Android.mk")
         }
     }
-    ndkVersion = "28.0.13004108"
+    ndkVersion = "30.0.16248370"
 
     packaging {
         jniLibs {
