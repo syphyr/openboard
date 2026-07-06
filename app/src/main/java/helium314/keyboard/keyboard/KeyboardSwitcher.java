@@ -736,12 +736,13 @@ public final class KeyboardSwitcher implements KeyboardState.SwitchActions {
     }
 
     @SuppressLint("InflateParams")
-    public View onCreateInputView(@NonNull Context displayContext, final boolean isHardwareAcceleratedDrawingEnabled) {
+    public View onCreateInputView(@NonNull Context displayContext, boolean isHardwareAcceleratedDrawingEnabled) {
+        Log.d(TAG, "create new input view");
         if (mKeyboardView != null) {
             mKeyboardView.closing();
         }
         PointerTracker.clearOldViewData();
-        final SharedPreferences prefs = KtxKt.prefs(displayContext);
+        SharedPreferences prefs = KtxKt.prefs(displayContext);
         if (mSuggestionStripView != null)
             prefs.unregisterOnSharedPreferenceChangeListener(mSuggestionStripView);
         if (mClipboardHistoryView != null)
