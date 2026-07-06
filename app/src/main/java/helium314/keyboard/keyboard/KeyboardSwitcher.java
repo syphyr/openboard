@@ -226,7 +226,7 @@ public final class KeyboardSwitcher implements KeyboardState.SwitchActions {
         }
     }
 
-    public Keyboard getKeyboard() {
+    @Nullable public Keyboard getKeyboard() {
         if (mKeyboardView != null) {
             return mKeyboardView.getKeyboard();
         }
