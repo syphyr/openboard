@@ -571,23 +571,22 @@ public final class InputLogic {
         final int codePointBeforeCursor = mConnection.getCodePointBeforeCursor();
         if (Character.isLetterOrDigit(codePointBeforeCursor)
                 || settingsValues.isUsuallyFollowedBySpace(codePointBeforeCursor)) {
-            int autoCapsState = getCurrentAutoCapsState(settingsValues);
             // autoShiftHasBeenOverridden is weird
             // before switching CapsMode to enum, it was CapsMode != autoCapsState
             // autoCapsState is 0 (off), 0x1000, 0x2000, 0x4000 or a combination
             // old CapsMode was 0 (off), 1, 3, 5, 7
             // meaning both were incompatible, and the check was just returning whether both were 0
             // todo: maybe adjust this?
-            boolean autoShiftHasBeenOverridden = keyboardSwitcher.getKeyboardCapsMode() == CapsMode.OFF && autoCapsState != 0;
+            boolean autoShiftHasBeenOverridden = keyboardSwitcher.getKeyboardCapsMode() == CapsMode.OFF && getCurrentAutoCapsState(settingsValues) != 0;
             if (settingsValues.mAutospaceBeforeGestureTyping)
-                mSpaceState = SpaceState.PHANTOM;
+                mSpaceState = SpaceState.PHANTOM; // influences autoCapsState
             if (!autoShiftHasBeenOverridden) {
                 // When we change the space state, we need to update the shift state of the
                 // keyboard unless it has been overridden manually. This is happening for example
                 // after typing some letters and a period, then gesturing; the keyboard is not in
                 // caps mode yet, but since a gesture is starting, it should go in caps mode,
                 // unless the user explicitly said it should not.
-                keyboardSwitcher.requestUpdatingShiftState(autoCapsState, getCurrentRecapitalizeState());
+                keyboardSwitcher.requestUpdatingShiftState(getCurrentAutoCapsState(settingsValues), getCurrentRecapitalizeState());
             }
         }
         mConnection.endBatchEdit();
