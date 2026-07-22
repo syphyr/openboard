@@ -5,7 +5,6 @@ import androidx.core.content.edit
 import helium314.keyboard.latin.common.StringUtils
 import helium314.keyboard.latin.settings.Defaults
 import helium314.keyboard.latin.settings.Settings
-import helium314.keyboard.latin.utils.Log
 import helium314.keyboard.latin.utils.prefs
 import kotlinx.serialization.json.Json
 
@@ -14,13 +13,11 @@ object RecentEmojis {
     private val prefs = Settings.getCurrentContext().prefs()
 
     fun set(emojis: List<String>) {
-        Log.i("test", "set $emojis")
         prefs.edit { putString(Settings.PREF_RECENT_EMOJIS, Json.encodeToString(emojis)) }
     }
 
     @JvmStatic
     fun add(emoji: String) {
-        Log.i("test", "add $emoji")
         if (emoji.isEmpty()) return
         val recents = get()
         recents.removeAll { it == emoji }
