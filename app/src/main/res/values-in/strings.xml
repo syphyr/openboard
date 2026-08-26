@@ -421,4 +421,6 @@
     <string name="backspace_reverts_autocorrect">Backspace mengembalikan koreksi otomatis</string>
     <string name="prefs_emoji_skin_tone">Warna kulit emoji bawaan</string>
     <string name="prefs_emoji_skin_tone_neutral">Netral</string>
+    <string name="suggest_emojis">Saran emoji</string>
+    <string name="toolbar_swipe_down_to_hide">Sembunyikan papan ketik dengan mengusap</string>
 </resources>

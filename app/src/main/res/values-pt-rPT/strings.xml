@@ -544,4 +544,6 @@
     <string name="subtype_generic_4row">%s (4 filas)</string>
     <string name="about_community_links">Ligações da comunidade</string>
     <string name="about_community_links_description">Temas, editor de esquema, discussões…</string>
+    <string name="layout_dpad" tools:keep="@string/layout_dpad">Teclas direcionais</string>
+    <string name="space_swipe_toggle_dpad_entry">Mudar para teclas direcionais</string>
 </resources>
