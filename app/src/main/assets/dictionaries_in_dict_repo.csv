@@ -1,3 +1,4 @@
+emoji,aa,cldr
 emoji,af,cldr
 main,af,exp
 emoji,ak,cldr
@@ -18,6 +19,7 @@ main,az,
 emoji,bn,cldr
 main,bn,
 main,bn2,
+emoji,ba,cldr
 emoji,eu,cldr
 main,eu,
 emoji,be,cldr
@@ -83,6 +85,7 @@ symbols,fr,exp
 emoji,fr,cldr
 main,fr,
 main,fr,exp
+emoji,ff,cldr
 emoji,gl,cldr
 main,gl,
 main,gl,exp
@@ -178,6 +181,7 @@ emoji,nb,cldr
 main,nb,
 main,nb,exp
 emoji,nn,cldr
+main,nn,
 emoji,no,cldr
 emoji,oc,cldr
 emoji,or,cldr
@@ -217,6 +221,7 @@ emoji,gd,cldr
 main,sr_ZZ,
 emoji,sr,cldr
 main,sr,
+emoji,shn,cldr
 emoji,sd,cldr
 main,sd,
 emoji,si,cldr
@@ -234,10 +239,12 @@ main,es,
 main,es,exp
 main,zgh_ZZ,
 main,zgh,
+emoji,su,cldr
 emoji,sw,cldr
 emoji,sv,cldr
 main,sv,
 main,sv,exp
+emoji,syr,cldr
 emoji,tg,cldr
 emoji,ta,cldr
 main,ta,

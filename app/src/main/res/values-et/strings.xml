@@ -546,4 +546,6 @@
     <string name="subtype_tok">Toki Pona</string>
     <string name="layout_dpad" tools:keep="@string/layout_dpad">Suunaklahvistik</string>
     <string name="space_swipe_toggle_dpad_entry">Lülita suunaklahvistik sisse/välja</string>
+    <string name="show_dpad_key">D-klahvistiku klahv</string>
+    <string name="recent_emojis_cleared">Hiljutikasutatud emojid on eemaldatud</string>
 </resources>

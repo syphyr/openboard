@@ -548,4 +548,6 @@
     <string name="subtype_tok">Toki pona</string>
     <string name="layout_dpad" tools:keep="@string/layout_dpad">Směrové klávesy</string>
     <string name="space_swipe_toggle_dpad_entry">Přepnout směrové klávesy</string>
+    <string name="show_dpad_key">Klávesa pro D-pad</string>
+    <string name="recent_emojis_cleared">Vymazané nedávné emodži</string>
 </resources>
